@@ -1,0 +1,59 @@
+@import "_portlet_decorator.scss";
+
+@import "partials/fonts";
+@import "partials/layout";
+@import "partials/buttons";
+@import "partials/footer";
+@import "partials/navbar";
+
+#content {
+
+}
+
+#wrapper {
+
+}
+
+body {
+
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+// BACKGROUNDS
+
+.secondary-background-color {
+	background-color: $secondary-brand-background-color;
+	color: $tertiary-brand-color;
+	font-family: oswaldlight;
+}
+
+.tertiary-background-color {
+	background-color: $tertiary-background-color;
+	color: $secondary-brand-color;
+	font-family: oswaldlight;
+}
+
+// JUMBOTRON
+
+.container-fluid .jumbotron {
+	border-radius: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.jumbotron.background-image {
+	background-position: center center;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+

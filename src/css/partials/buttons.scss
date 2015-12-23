@@ -1,0 +1,30 @@
+.btn-xl {
+	border-radius: 0;
+	font-size: 19px;
+	font-family: oswaldlight;
+	padding: $button-padding;
+	text-transform: uppercase;
+}
+
+.btn-theme-default {
+	background-color: $tertiary-background-color;
+	border-color: $secondary-brand-color;
+	color: $secondary-brand-color;
+
+	&:hover, &:focus {
+		background-color: $primary-brand-background-color;
+		border-color: $primary-brand-color;
+		color: $secondary-brand-color;
+	}
+}
+
+.btn-theme-primary {
+	background-color: $primary-brand-background-color;
+	border-color:  $primary-brand-color;
+
+	&:hover, &:focus {
+		background-color: $tertiary-background-color;
+		border-color: $secondary-brand-color;
+		color: $secondary-brand-color;
+	}
+}
