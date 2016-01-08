@@ -38,7 +38,7 @@
 		</ul>
 
 		<p class="powered-by">
-			<#call language> ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
 		</p>
 
 	</div>
