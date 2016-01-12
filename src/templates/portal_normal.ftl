@@ -20,7 +20,9 @@
 
 <@liferay.product_menu_sidebar state="${liferay_product_menu_state}" />
 
-<@liferay.control_menu />
+<#if is_setup_complete && is_signed_in>
+	<@liferay_control_menu["control-menu"] />
+</#if>
 
 	<div class="container-fluid" id="wrapper">
 
@@ -31,7 +33,7 @@
 					<h1 class="site-title">
 
 						<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />
-							<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
+							<img alt="${logo_description}" height="${site_logo_height}" src="${images_folder}/1975_logo.png" width="${site_logo_width}" />
 						</a>
 
 						<#if show_site_name>
@@ -44,7 +46,7 @@
 				</div>
 
 				<#if !is_signed_in>
-					<a data-redirect="${is_login_redirect_required}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
+					<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 				</#if>
 
 				<#if has_navigation && is_setup_complete>
