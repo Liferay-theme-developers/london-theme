@@ -3,7 +3,7 @@
 	<div class="container-fluid-1280">
 
 		<div id="footer-brand">
-			<img alt="[Company Logo]" src="${images_folder}/content/company_logo_footer.png" />
+			<img alt="[Company Logo]" src="${images_folder}/content/1975_footer_logo.png" />
 		</div>
 
 		<div class="row">
