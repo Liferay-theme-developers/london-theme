@@ -29,20 +29,19 @@
 		<div class="tertiary-background-color">
 
 			<header id="banner" role="banner">
-				<div id="heading">
-					<h1 class="site-title">
-
-						<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />
-							<img alt="${logo_description}" height="${site_logo_height}" src="${images_folder}/1975_logo.png" width="${site_logo_width}" />
-						</a>
-
-						<#if show_site_name>
-							<span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />
-								${site_name}
-							</span>
-						</#if>
-
-					</h1>
+ 				<div class="container">
+					<div id="heading">
+						<h1 class="site-title">
+							<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
+								<img alt="${logo_description}" height="${site_logo_height}" src="${images_folder}/1975_logo.png" width="${site_logo_width}" />
+							</a>
+							<#if show_site_name>
+								<span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
+									${site_name}
+								</span>
+							</#if>
+						</h1>
+					</div>
 				</div>
 
 				<#if !is_signed_in>
@@ -102,7 +101,7 @@
 				</div>
 
 				<#if selectable>
-					<@liferay_util["include"] page=content_include />
+					${theme.include(content_include)}
 				<#else>
 					${portletDisplay.recycle()}
 					${portletDisplay.setTitle(the_title)}
