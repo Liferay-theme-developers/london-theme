@@ -1,0 +1,40 @@
+#navigation {
+	a {
+		color: $secondary-brand-color;
+	}
+}
+
+// TEMPORARY STYLES
+@include sm() {
+	a.logo, /*#navigation,*/ #navigationCollapse {
+		position: absolute;
+	}
+	#navigationCollapse {
+		right: 0;
+
+		nav, .user-avatar-image {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		a {
+			color: $secondary-brand-color;
+		}
+	}
+
+	#banner .navbar {
+		margin: 0;
+		min-height: 0;
+	}
+
+	.signed-in #wrapper  {
+		margin-top: 32px;
+	}
+
+	@media (min-width: 768px) {
+		.signed-in #wrapper {
+			margin-top: 32px;
+		}
+	}
+}
+// END TEMPORARY STYLES
