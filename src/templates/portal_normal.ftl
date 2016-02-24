@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 
 <#include init />
+
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
+	<head>
+		<title>${the_title} - ${company_name}</title>
 
-<head>
-	<title>${the_title} - ${company_name}</title>
+		<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
-	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+		<@liferay_util["include"] page=top_head_include />
+	</head>
 
-	<@liferay_util["include"] page=top_head_include />
+	<body class="${css_class}">
 
-</head>
+		<@liferay_ui["quick-access"] contentId="#main-content" />
 
-<body class="${css_class}">
+		<@liferay_util["include"] page=body_top_include />
 
-<@liferay_ui["quick-access"] contentId="#main-content" />
+		<@liferay.control_menu />
 
-<@liferay_util["include"] page=body_top_include />
-
-<@liferay.product_menu_sidebar state="${liferay_product_menu_state}" />
-
-<#if is_setup_complete && is_signed_in>
-	<@liferay_control_menu["control-menu"] />
-</#if>
-
-	<div class="container-fluid" id="wrapper">
-
-		<div class="tertiary-background-color">
-
+		<div id="wrapper">
 			<header id="banner" role="banner">
- 				<div class="container">
-					<div id="heading">
-						<h1 class="site-title">
-							<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-								<img alt="${logo_description}" height="${site_logo_height}" src="${images_folder}/1975_logo.png" width="${site_logo_width}" />
+				<div class="container">
+
+					<nav class="navbar">
+						<div class="navbar-header">
+							<a class="${logo_css_class}" href="${site_default_url}" rel="home" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
+								<img alt="${logo_description}" height="${company_logo_height}" src="${site_logo}" width="${company_logo_width}" />
+								<#if show_site_name>
+									<span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
+										${site_name}
+									</span>
+								</#if>
 							</a>
-							<#if show_site_name>
-								<span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-									${site_name}
-								</span>
-							</#if>
-						</h1>
-					</div>
+
+							<button class="collapsed navbar-toggle" data-target="#navigationCollapse" data-toggle="collapse" type="button">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						<#if has_navigation && is_setup_complete>
+							<#include full_templates_path + "/navigation.ftl">
+						</#if>
+					</nav>
+
 				</div>
-
-				<#if !is_signed_in>
-					<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
-				</#if>
-
-				<#if has_navigation && is_setup_complete>
-					<#include full_templates_path + "/navigation.ftl">
-				</#if>
-
 			</header>
 
-			<main id="content" role="main">
-				<h1 class="hide-accessible">${the_title}</h1>
+			<#include "${full_templates_path}/TEMP-content.ftl" />
 
-				<!-- PROMO PRINCIPAL -->
-				<div class="background-image jumbotron" style="background-image: url(${images_folder}/content/primary-background.jpg)">
-					<section class="container">
-						<div class="col-sm-8">
-							<h2 class="h1">Siente, escucha, disfruta...</h2>
-							<p class="lead">Descubriendo otras formas de emocionarte con la radio.</p>
-							<p>Play free or subscribe to 1975 LONDON Premium.</p>
-							<p><a class="btn btn-default btn-theme-default btn-xl" href="#">Play free</a>  or  <a class="btn btn-primary btn-theme-primary btn-xl" href="#">Download</a></p>
+			<footer id="footer" role="contentinfo">
+
+				<nav class="container lead" id="company-info">
+					<div class="row" id="footer-logo">
+						<div class="col-md-12">
+							<img alt="1975 London" src="${images_folder}/content/footer-logo@1x.png">
 						</div>
-					</section>
+					</div>
+					<div class="row text-lowercase" id="site-links">
+						<ul class="col-md-2 col-xs-6 list-unstyled">
+							<li><a href="#">About</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Blogs</a></li>
+							<li><a href="#">Media</a></li>
+							<li><a href="#">Shop</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+						<ul class="col-md-2 col-xs-6 list-unstyled">
+							<li><a href="#">Developers</a></li>
+							<li><a href="#">Goals</a></li>
+							<li><a href="#">Market</a></li>
+							<li><a href="#">Visit us</a></li>
+						</ul>
+					</div>
+					<div class="row" id="legal-links">
+						<ul class="col-xs-12 list-inline">
+							<li><a href="#">Legal</a></li>
+							<li><a href="#">Cookies</a></li>
+							<li><a href="#">Legal Terms</a></li>
+							<li><a href="#">2015 1975 London Inc.</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="container">
+					<p id="copyright">
+						<small><@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a></small>
+					</p>
 				</div>
 
-				<div class="col-no-padding jumbotron">
+				<#-- <#if has_navigation>
+					<#include "${full_templates_path}/footer.ftl" />
+				</#if> -->
 
-					<div class="col-md-4">
-						<a href="#">
-							<img alt="[Insert alternative description here]" class="center-block img-responsive" src="${images_folder}/content/640x480_1.jpg" />
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#">
-							<img alt="[Insert alternative description here]" class="center-block img-responsive" src="${images_folder}/content/640x480_2.jpg" />
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#">
-							<img alt="[Insert alternative description here]" class="center-block img-responsive" src="${images_folder}/content/640x480_3.jpg" />
-						</a>
-					</div>
+			</footer>
 
-				</div>
+		</div>
 
-				<div class="background-image jumbotron" style="background-image: url(${images_folder}/content/secondary-background.jpg)">
-					<section class="container">
-						<div class="col-sm-8">
-							<h2 class="h1">1975LONDON comparte tus recuerdos</h2>
-							<p class="lead">Él aprende de tus selecciones, de tus búsquedas, de las reproducciones de tus amigos.</p>
-							<p class="lead">El desarrollo se centra en ti, no en una lista de funcionalidades, para hacer frente a este o a ese otro. Tú y solo tú.</p>
-							<p></p>
-						</div>
-					</section>
-				</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
 
-				<#if selectable>
-					${theme.include(content_include)}
-				<#else>
-					${portletDisplay.recycle()}
-					${portletDisplay.setTitle(the_title)}
-					<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+					<#if selectable>
 						<@liferay_util["include"] page=content_include />
-					</@>
-				</#if>
+					<#else>
+						${portletDisplay.recycle()}
 
-			</main>
+						${portletDisplay.setTitle(the_title)}
 
+						<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+							<@liferay_util["include"] page=content_include />
+						</@>
+					</#if>
+
+					<@liferay_util["include"] page=body_bottom_include />
+
+					<@liferay_util["include"] page=bottom_include />
+
+				</div>
 			</div>
+		</div>
 
-		<#include full_templates_path + "/footer.ftl">
-	</div>
-
-<@liferay_util["include"] page=body_bottom_include />
-
-<@liferay_util["include"] page=bottom_include />
-
-</body>
-
+	</body>
 </html>
