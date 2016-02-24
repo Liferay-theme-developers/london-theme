@@ -1,0 +1,25 @@
+#footer {
+	a {
+		color: $tertiary-brand-color;
+	}
+}
+
+#footer-logo {
+	margin-bottom: 40px;
+	margin-top: 60px;
+
+	@include md() {
+		margin-bottom: 80px;
+		margin-top: 134px;
+	}
+}
+
+#site-links {
+	li {margin-bottom: 37px}
+}
+
+#legal-links {
+	@include md()  {
+		margin-top: 150px
+	}
+}
