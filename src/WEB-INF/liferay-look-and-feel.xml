@@ -5,10 +5,10 @@
 	<compatibility>
 		<version>7.0.0+</version>
 	</compatibility>
-	<theme id="london-theme" name="London Theme">
+	<theme id="london" name="london">
 		<template-extension>ftl</template-extension>
 		<settings>
-			<setting configurable="true" key="site-logo-retina" type="checkbox" value="true" />
+			<setting configurable="true" key="site-logo-retina" type="checkbox" value="true"/>
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
