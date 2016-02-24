@@ -6,54 +6,105 @@
 @import "partials/footer";
 @import "partials/header";
 
+#content, #banner, #footer {
+	font-family: oswaldlight;
+}
+
+.text-info {
+	color: $primary-brand-color;
+}
+
 #content {
-
+	color: $secondary-brand-color;
 }
-
-#wrapper {
-
-}
-
-body {
-
-}
-
-.container-fluid {
-	padding: 0;
-}
-
-// BACKGROUNDS
 
 .secondary-background-color {
 	background-color: $secondary-brand-background-color;
 	color: $tertiary-brand-color;
-	font-family: oswaldlight;
 }
 
-.tertiary-background-color {
-	background-color: $tertiary-background-color;
+.jumbotron {
+	background-color: $tertiary-brand-color;
 	color: $secondary-brand-color;
-	font-family: oswaldlight;
-}
-
-// JUMBOTRON
-
-.container-fluid .jumbotron {
-	border-radius: 0;
 	margin-bottom: 0;
-	overflow: hidden;
-	padding: 0;
+	padding: 200px 0;
+	position: static;
+
+	&.aspect-ratio-bg-cover {
+		@include md() {
+			padding: 350px 0 250px;
+		}
+	}
 }
 
-.jumbotron.background-image {
-	background-position: center center;
-	background-size: cover;
+.jumbotron.aspect-ratio img {
+	position: static;
+	width: auto;
 }
 
+#image-tiles {
+	position: relative;
 
+	[class*="col-"] {
+		position: static
+	}
 
+	@include md() {
+		.container {
+			left: 0;
+			position: absolute;
+			right: 0;
+		}
 
+		.aspect-ratio {
+			position: static
+		}
 
+		.xl-background.aspect-ratio {
+			padding-bottom: 61%;
+		}
+	}
+}
 
+.xl-background  {
+	padding-left: 0;
+	padding-right: 0;
 
+	.lead {
+		color: $tertiary-brand-color;
+		margin: 104px 0 60px;
+	}
 
+	.small {
+		color: $primary-brand-color;
+	}
+}
+
+.texture-background {
+	.h1 {
+		font-size: 60px;
+	}
+
+	&.aspect-ratio-bg-cover {
+		padding-bottom: 30%;
+
+		@include lg() {
+			padding-bottom: 91%
+		}
+	}
+}
+
+.list-module {
+	.icon-minus {
+		font-size: 7px;
+		vertical-align: middle;
+	}
+
+	ul, li {
+		margin-bottom: 25px;
+	}
+}
+
+h3.h2 {
+	font-size: 32px;
+}
