@@ -50,41 +50,21 @@
 				</div>
 			</header>
 
+
 			<#include "${full_templates_path}/TEMP-content.ftl" />
+				<#--<#if selectable>
+					<@liferay_util["include"] page=content_include />
+				<#else>
+					${portletDisplay.recycle()}
+
+					${portletDisplay.setTitle(the_title)}
+
+					<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+						<@liferay_util["include"] page=content_include />
+					</@>
+				</#if>-->
 
 			<footer id="footer" role="contentinfo">
-
-				<nav class="container lead" id="company-info">
-					<div class="row" id="footer-logo">
-						<div class="col-md-12">
-							<img alt="1975 London" src="${images_folder}/content/footer-logo@1x.png">
-						</div>
-					</div>
-					<div class="row text-lowercase" id="site-links">
-						<ul class="col-md-2 col-xs-6 list-unstyled">
-							<li><a href="#">About</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Blogs</a></li>
-							<li><a href="#">Media</a></li>
-							<li><a href="#">Shop</a></li>
-							<li><a href="#">Help</a></li>
-						</ul>
-						<ul class="col-md-2 col-xs-6 list-unstyled">
-							<li><a href="#">Developers</a></li>
-							<li><a href="#">Goals</a></li>
-							<li><a href="#">Market</a></li>
-							<li><a href="#">Visit us</a></li>
-						</ul>
-					</div>
-					<div class="row" id="legal-links">
-						<ul class="col-xs-12 list-inline">
-							<li><a href="#">Legal</a></li>
-							<li><a href="#">Cookies</a></li>
-							<li><a href="#">Legal Terms</a></li>
-							<li><a href="#">2015 1975 London Inc.</a></li>
-						</ul>
-					</div>
-				</nav>
 
 				<div class="container">
 					<p id="copyright">
@@ -97,32 +77,11 @@
 				</#if> -->
 
 			</footer>
-
 		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
+		<@liferay_util["include"] page=body_bottom_include />
 
-					<#if selectable>
-						<@liferay_util["include"] page=content_include />
-					<#else>
-						${portletDisplay.recycle()}
-
-						${portletDisplay.setTitle(the_title)}
-
-						<@liferay_theme["wrap-portlet"] page="portlet.ftl">
-							<@liferay_util["include"] page=content_include />
-						</@>
-					</#if>
-
-					<@liferay_util["include"] page=body_bottom_include />
-
-					<@liferay_util["include"] page=bottom_include />
-
-				</div>
-			</div>
-		</div>
+		<@liferay_util["include"] page=bottom_include />
 
 	</body>
 </html>

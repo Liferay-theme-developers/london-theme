@@ -1,17 +1,27 @@
+.signed-in #wrapper  {
+	margin-top: 20px;
+
+	@include sm() {
+		margin-top: 32px;
+	}
+}
+
 a.logo {
 	position: absolute;
 
 	img {
-		@include transition-delay(0.5s);
+		@include transition-delay(0s);
 		@include transition-duration(0.3s);
 		@include transition-property(width, height, -o-transform);
 		@include transition-timing-function(ease-in);
 	}
 }
 
-.collapsing + div a.logo img, .collapse.in + div a.logo img {
-	height: 48px;
-	width: 48px;
+@include media-query(null, $breakpoint_tablet - 1) {
+	.collapsing + div a.logo img, .collapse.in + div a.logo img {
+		height: 48px;
+		width: 48px;
+	}
 }
 
 .navbar-inverse, #banner {
@@ -21,14 +31,15 @@ a.logo {
 .navbar.navbar-inverse {
 	.navbar-header {
 		position: absolute;
-		width: 100%;
 		top: 0;
+		width: 100%;
 	}
 
 	.navbar-collapse:first-child {
 		@include media-query(null, $screen-xs-max)  {
 			background-color: $tertiary-background-color;
-			border-top: 1px solid rgba($secondary-brand-color, 0.5);
+			border: solid rgba($secondary-brand-color, 0.5);
+			border-width: 1px 0 0;
 			margin: 50px -15px 0;
 			position: static;
 
@@ -37,13 +48,9 @@ a.logo {
 			}
 		}
 	}
-}
 
-.signed-in #wrapper  {
-	margin-top: 20px;
-
-	@include sm() {
-		margin-top: 32px;
+	.portlet:hover {
+		z-index: 500;
 	}
 }
 
@@ -63,6 +70,7 @@ a.logo {
 	@include sm() {
 		position: absolute;
 		right: 0;
+		z-index: auto;
 	}
 
 	.user-avatar-image {
@@ -73,15 +81,15 @@ a.logo {
 	a {
 		color: $secondary-brand-color;
 		display: block;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
 	}
 
 	.user-personal-bar a {
 		padding: 11px 15px;
     }
-
-	.portlet:hover {
-		z-index: 500;
-	}
 }
 
 @include sm() {

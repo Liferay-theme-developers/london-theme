@@ -1,3 +1,4 @@
+<main id="content" role="main">
 	<h1 class="hide-accessible">${the_title}</h1>
 
 	<div class="aspect-ratio aspect-ratio-bg-cover jumbotron" style="background-image: url(${images_folder}/content/primary-background.jpg)">
@@ -112,3 +113,29 @@
 			</div>
 		</section>
 	</div>
+	<nav class="container lead" id="company-info">
+		<img alt="1975 London" id="footer-logo" src="${images_folder}/content/footer-logo@1x.png">
+		<div class="row text-lowercase" id="site-links">
+			<ul class="col-md-2 col-xs-6 list-unstyled">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Blogs</a></li>
+				<li><a href="#">Media</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+			<ul class="col-md-2 col-xs-6 list-unstyled">
+				<li><a href="#">Developers</a></li>
+				<li><a href="#">Goals</a></li>
+				<li><a href="#">Market</a></li>
+				<li><a href="#">Visit us</a></li>
+			</ul>
+		</div>
+		<ul class="container list-inline" id="legal-links">
+			<li><a href="#">Legal</a></li>
+			<li><a href="#">Cookies</a></li>
+			<li><a href="#">Legal Terms</a></li>
+			<li><a href="#">2015 1975 London Inc.</a></li>
+		</ul>
+	</nav>
+</main>

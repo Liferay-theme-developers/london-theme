@@ -7,7 +7,6 @@
 				</a>
 			</li>
 		</#if>
-
 		<#foreach nav_item in nav_items>
 			<li role="presentation">
 				<a aria-labelledby="layout_${nav_item.getLayoutId()}" href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
