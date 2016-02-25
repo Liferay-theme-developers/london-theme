@@ -18,14 +18,23 @@ a.logo {
 	background-color: $tertiary-background-color;
 }
 
-.navbar.navbar-inverse .navbar-collapse:first-child {
-	@include media-query(null, $screen-xs-max)  {
-		background-color: $tertiary-background-color;
-		border-width: 0;
-		margin: 0 -15px;
+.navbar.navbar-inverse {
+	.navbar-header {
+		position: absolute;
+		width: 100%;
+		top: 0;
+	}
 
-		li {
-			border-bottom: 1px solid rgba($secondary-brand-color, 0.3);
+	.navbar-collapse:first-child {
+		@include media-query(null, $screen-xs-max)  {
+			background-color: $tertiary-background-color;
+			border-top: 1px solid rgba($secondary-brand-color, 0.5);
+			margin: 50px -15px 0;
+			position: static;
+
+			li {
+				border-bottom: 1px solid rgba($secondary-brand-color, 0.3);
+			}
 		}
 	}
 }
@@ -42,9 +51,9 @@ a.logo {
 	margin-bottom: 0;
 
 	& .navbar-toggle:hover {
-		background-color: $primary-brand-background-color;
+			background-color: $primary-brand-background-color;
+		}
 	}
-}
 
 #navigationCollapse {
 	@include sm() {
