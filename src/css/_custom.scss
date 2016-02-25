@@ -61,6 +61,10 @@
 		left: 0;
 		position: absolute;
 		top: 0;
+
+		@include media-query(null, $breakpoint_tablet - 1) {
+			right: 0;
+		}
 	}
 
 	.texture-background {
@@ -78,8 +82,6 @@
 	}
 
 	@include media-query(null, $breakpoint_tablet - 1) {
-		padding-bottom: 29%;
-		padding-top: 21%;
 		position: relative;
 	}
 
