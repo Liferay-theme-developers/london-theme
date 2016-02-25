@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>7.0.0+</version>
 	</compatibility>
-	<theme id="london" name="london">
+	<theme id="london" name="London">
 		<template-extension>ftl</template-extension>
 		<settings>
 			<setting configurable="true" key="site-logo-retina" type="checkbox" value="true"/>
