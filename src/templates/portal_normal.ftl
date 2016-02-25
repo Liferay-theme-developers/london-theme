@@ -23,7 +23,11 @@
 			<header id="banner" role="banner">
 				<div class="container">
 
-					<nav class="navbar">
+					<nav class="navbar navbar-inverse">
+						<#if has_navigation && is_setup_complete>
+							<#include full_templates_path + "/navigation.ftl">
+						</#if>
+
 						<div class="navbar-header">
 							<a class="${logo_css_class}" href="${site_default_url}" rel="home" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
 								<img alt="${logo_description}" height="${company_logo_height}" src="${site_logo}" width="${company_logo_width}" />
@@ -37,12 +41,10 @@
 							<button class="collapsed navbar-toggle" data-target="#navigationCollapse" data-toggle="collapse" type="button">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
 							</button>
 						</div>
 
-						<#if has_navigation && is_setup_complete>
-							<#include full_templates_path + "/navigation.ftl">
-						</#if>
 					</nav>
 
 				</div>

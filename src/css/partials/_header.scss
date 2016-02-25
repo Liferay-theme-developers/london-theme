@@ -1,22 +1,60 @@
-.signed-in #wrapper  {
-	margin-top: 20px;
+a.logo {
+	position: absolute;
+
+	img {
+		-moz-transition-duration: 1s, 1s, 1s;
+		-moz-transition-property: width, height, -o-transform;
+		-o-transition-duration: 1s, 1s, 1s;
+		-o-transition-property: width, height, -o-transform;
+		-webkit-transition: -webkit-transform 1s, width 1s, height 1s;
+		transition-duration: 0.3s, 0.3s, 0.3s;
+		transition-property: width, height, transform;
+	}
 }
 
-#navigation {
-	a {
-		color: $secondary-brand-color;
-	}
+.collapsing + div a.logo img, .collapse.in + div a.logo img {
+	height: 48px;
+	width: 48px;
 }
 
 .navbar-inverse, #banner {
 	background-color: $tertiary-background-color;
 }
 
+.navbar.navbar-inverse .navbar-collapse:first-child {
+	@include media-query(null, $screen-xs-max)  {
+		background-color: $tertiary-background-color;
+		border-width: 0;
+		margin: 0 -15px;
+
+		li {
+			border-bottom: 1px solid rgba($secondary-brand-color, 0.3);
+		}
+	}
+}
+
+.signed-in #wrapper  {
+	margin-top: 20px;
+
+	@include sm() {
+		margin-top: 32px;
+	}
+}
+
 .navbar-inverse {
 	margin-bottom: 0;
+
+	& .navbar-toggle:hover {
+		background-color: $primary-brand-background-color;
+	}
 }
 
 #navigationCollapse {
+	@include sm() {
+		position: absolute;
+		right: 0;
+	}
+
 	.user-avatar-image {
 		display: inline-block;
 		vertical-align: middle;
@@ -24,39 +62,30 @@
 
 	a {
 		color: $secondary-brand-color;
+		display: block;
 	}
 
 	.user-personal-bar a {
 		padding: 11px 15px;
     }
+
+	.portlet:hover {
+		z-index: 500;
+	}
 }
 
 @include sm() {
-	a.logo, #navigationCollapse {
-		position: absolute;
-	}
-
-	#navigationCollapse {
-		right: 0;
-	}
-
-	/*nav {
-		display: inline-block;
-		vertical-align: middle;
-	}*/
-
 	#banner .navbar {
 		margin: 0;
 		min-height: 0;
 	}
 
-	.signed-in #wrapper  {
-		margin-top: 32px;
+	#navigation, .user-personal-bar {
+		display: inline-block;
+		vertical-align: middle;
 	}
+}
 
-	@media (min-width: 768px) {
-		.signed-in #wrapper {
-			margin-top: 32px;
-		}
-	}
+.controls-hidden .navbar-inverse {
+	border-width: 0;
 }
