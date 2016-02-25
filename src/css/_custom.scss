@@ -78,14 +78,18 @@
 	}
 
 	@include media-query(null, $breakpoint_tablet - 1) {
-		position: relative;
 		padding-bottom: 29%;
 		padding-top: 21%;
+		position: relative;
 	}
 
 	.lead {
 		color: $tertiary-brand-color;
-		margin: 104px 0 8%;
+		margin: 10% 0 8%;
+
+		@include md() {
+			margin-top: 104px;
+		}
 	}
 
 	.small {
@@ -102,6 +106,8 @@
 }
 
 .list-module {
+	margin-bottom: 20px;
+
 	.icon-minus {
 		font-size: 7px;
 		vertical-align: middle;
