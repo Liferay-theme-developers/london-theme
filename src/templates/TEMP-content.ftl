@@ -1,5 +1,3 @@
-<main id="content" role="main">
-
 	<h1 class="hide-accessible">${the_title}</h1>
 
 	<div class="aspect-ratio aspect-ratio-bg-cover jumbotron" style="background-image: url(${images_folder}/content/primary-background.jpg)">
@@ -16,20 +14,20 @@
 	</div>
 
 	<div class="container-fluid">
-		<div class="col-no-padding row">
-			<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-4 col-no-padding">
 				<a href="#" title="[Text Hint]">
 					<div class="aspect-ratio aspect-ratio-4-to-3 aspect-ratio-bg-cover" style="background-image:url(${images_folder}/content/640x480_1.jpg);">
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-no-padding">
 				<a href="#" title="[Text Hint]">
 					<div class="aspect-ratio aspect-ratio-4-to-3 aspect-ratio-bg-cover" style="background-image:url(${images_folder}/content/640x480_2.jpg);">
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-no-padding">
 				<a href="#" title="[Text Hint]">
 					<div class="aspect-ratio aspect-ratio-4-to-3 aspect-ratio-bg-cover" style="background-image:url(${images_folder}/content/640x480_3.jpg);">
 					</div>
@@ -39,28 +37,28 @@
 	</div>
 
 	<div class="container-fluid">
-		<div class="col-no-padding row" id="image-tiles">
-			<div class="col-lg-8 col-md-8 xl-background">
-				<span class="background-placeholder col-md-8 col-xs-12" style="background-image: url(${images_folder}/content/background_2_2.jpg)"></span>
-				<div class="row">
-					<div class=" col-lg-4 col-lg-offset-3 col-md-6 col-md-offset-1 col-xs-6 col-xs-offset-1 h1">
+		<div class="row" id="image-tiles">
+			<div class="col-lg-8 col-md-8 col-no-padding xl-background">
+				<span class="background-placeholder col-md-8" style="background-image: url(${images_folder}/content/background_2_2.jpg)"></span>
+				<div class="container-fluid">
+					<div class=" col-lg-4 col-md-6 col-xs-6 h1">
 						<p class="lead">Sin Publicidad, ni cortes, es la primera vez que disfruto de esta increible calidad sonido, sin estar presente en un concierto. IMPRESCINDIBLE.</p>
 						<p class="small">Jack Jones</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-4">
+			<div class="col-lg-4 col-md-4 col-no-padding">
 				<div class="texture-background" style="background-image: url(${images_folder}/content/background_1_2_1.png)">
-					<div class="row">
-						<div class="col-lg-5 col-md-8 col-md-offset-2 col-sm-10 col-xs-9 col-xs-offset-1">
+					<div class="container-fluid">
+						<div class="col-lg-8">
 							<h2 class="h1">Music from the heart</h2>
 							<p class="lead">La misión de nuestros expertos es descubrir y adentrarse en tus gustos musicales. De esa forma podemos ofrecerte lo que anhelas oir en cada momento de tu día. :)</p>
 						</div>
 					</div>
 				</div>
 				<div class="texture-background" style="background-image: url(${images_folder}/content/background_1_2_2.png)">
-					<div class="row">
-						<div class="col-lg-5 col-md-8 col-md-offset-2 col-sm-10 col-xs-9 col-xs-offset-1">
+					<div class="container-fluid">
+						<div class="col-lg-8">
 							<h2 class="h1">New on 1975 LONDON</h2>
 							<p class="lead">Olvídate de plataformas, olvídate de listas, olvídate de la App. Solo recuerda tus recuerdos, asociados a esa canción</p>
 							<p><a class="btn btn-theme-complementary btn-xl text-uppercase" href="#">Find out more</a></p>
@@ -114,5 +112,3 @@
 			</div>
 		</section>
 	</div>
-
-</main>
