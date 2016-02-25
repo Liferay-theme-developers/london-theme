@@ -18,19 +18,19 @@
 	<div class="container-fluid">
 		<div class="col-no-padding row">
 			<div class="col-md-4">
-				<a class="center-block" href="#">
+				<a href="#" title="[Text Hint]">
 					<div class="aspect-ratio aspect-ratio-4-to-3 aspect-ratio-bg-cover" style="background-image:url(${images_folder}/content/640x480_1.jpg);">
 					</div>
 				</a>
 			</div>
 			<div class="col-md-4">
-				<a class="center-block" href="#">
+				<a href="#" title="[Text Hint]">
 					<div class="aspect-ratio aspect-ratio-4-to-3 aspect-ratio-bg-cover" style="background-image:url(${images_folder}/content/640x480_2.jpg);">
 					</div>
 				</a>
 			</div>
 			<div class="col-md-4">
-				<a class="center-block" href="#">
+				<a href="#" title="[Text Hint]">
 					<div class="aspect-ratio aspect-ratio-4-to-3 aspect-ratio-bg-cover" style="background-image:url(${images_folder}/content/640x480_3.jpg);">
 					</div>
 				</a>
