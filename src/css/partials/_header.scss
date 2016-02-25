@@ -50,10 +50,14 @@ a.logo {
 .navbar-inverse {
 	margin-bottom: 0;
 
-	& .navbar-toggle:hover {
+	& .navbar-toggle {
+		border: 1px solid $secondary-brand-color;
+
+		&:hover, &:focus {
 			background-color: $primary-brand-background-color;
 		}
 	}
+}
 
 #navigationCollapse {
 	@include sm() {
