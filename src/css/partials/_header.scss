@@ -2,13 +2,10 @@ a.logo {
 	position: absolute;
 
 	img {
-		-moz-transition-duration: 1s, 1s, 1s;
-		-moz-transition-property: width, height, -o-transform;
-		-o-transition-duration: 1s, 1s, 1s;
-		-o-transition-property: width, height, -o-transform;
-		-webkit-transition: -webkit-transform 1s, width 1s, height 1s;
-		transition-duration: 0.3s, 0.3s, 0.3s;
-		transition-property: width, height, transform;
+		@include transition-delay(0.5s);
+		@include transition-duration(0.3s);
+		@include transition-property(width, height, -o-transform);
+		@include transition-timing-function(ease-in);
 	}
 }
 
