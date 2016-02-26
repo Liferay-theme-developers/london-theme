@@ -6,7 +6,7 @@
 @import "partials/footer";
 @import "partials/header";
 
-#content, #banner, #footer {
+#content, #main-content, #banner, #footer {
 	font-family: oswaldlight;
 }
 
@@ -15,11 +15,7 @@
 	margin-top: 0;
 }
 
-.text-info {
-	color: $primary-brand-color;
-}
-
-#content {
+#content, #main-content {
 	color: $secondary-brand-color;
 }
 
@@ -28,11 +24,20 @@
 	color: $tertiary-brand-color;
 }
 
+.text-info {
+	color: $primary-brand-color;
+}
+
+h3.h2 {
+	font-size: 32px;
+}
+
 .jumbotron {
 	background-color: $tertiary-brand-color;
 	color: $secondary-brand-color;
 	margin-bottom: 0;
-	padding: 8% 0;
+	padding-bottom: 8%;
+	padding-top: 8%;
 	position: static;
 
 	&.aspect-ratio-bg-cover {
@@ -42,11 +47,22 @@
 			padding-bottom: 14%;
 		}
 	}
-}
 
-.jumbotron.aspect-ratio img {
-	position: static;
-	width: auto;
+	&.aspect-ratio img {
+		position: static;
+		width: auto;
+	}
+
+	p.lead {
+		@include md() {
+			font-size: 32px
+		}
+	}
+	@include media-query(null, $screen-xs-max) {
+		h2.h1 {
+			font-size: 38px;
+		}
+	}
 }
 
 #image-tiles {
@@ -85,7 +101,7 @@
 		position: relative;
 	}
 
-	.lead {
+	.h1 {
 		color: $tertiary-brand-color;
 		margin: 10% 0 8%;
 
@@ -120,6 +136,3 @@
 	}
 }
 
-h3.h2 {
-	font-size: 32px;
-}

@@ -1,8 +1,21 @@
-.signed-in #wrapper  {
-	margin-top: 20px;
+#wrapper  {
+	.signed-in & {
+		margin-top: 20px;
+	}
+
+	.signed-out & {
+		margin-top: 0;
+		padding-top: 0;
+	}
 
 	@include sm() {
-		margin-top: 32px;
+		.signed-in & {
+			margin-top: 32px;
+		}
+
+		.signed-out & {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -29,6 +42,8 @@ a.logo {
 }
 
 .navbar.navbar-inverse {
+	border-width: 0;
+
 	.navbar-header {
 		position: absolute;
 		top: 0;
@@ -48,10 +63,10 @@ a.logo {
 			}
 		}
 	}
+}
 
-	.portlet:hover {
-		z-index: 500;
-	}
+.portlet:hover .portlet-topper {
+	z-index: 500;
 }
 
 .navbar-inverse {

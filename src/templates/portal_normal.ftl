@@ -50,19 +50,24 @@
 				</div>
 			</header>
 
+			<main id="content" role="main">
+				<#include "${full_templates_path}/TEMP-content.ftl" />
+				<div class="container">
+					<h1 class="hide-accessible">${the_title}</h1>
 
-			<#include "${full_templates_path}/TEMP-content.ftl" />
-				<#--<#if selectable>
-					<@liferay_util["include"] page=content_include />
-				<#else>
-					${portletDisplay.recycle()}
-
-					${portletDisplay.setTitle(the_title)}
-
-					<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+					<#if selectable>
 						<@liferay_util["include"] page=content_include />
-					</@>
-				</#if>-->
+					<#else>
+						${portletDisplay.recycle()}
+
+						${portletDisplay.setTitle(the_title)}
+
+						<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+							<@liferay_util["include"] page=content_include />
+						</@>
+					</#if>
+				</div>
+			</main>
 
 			<footer id="footer" role="contentinfo">
 
@@ -71,10 +76,6 @@
 						<small><@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a></small>
 					</p>
 				</div>
-
-				<#-- <#if has_navigation>
-					<#include "${full_templates_path}/footer.ftl" />
-				</#if> -->
 
 			</footer>
 		</div>
