@@ -43,7 +43,7 @@ h3.h2 {
 	&.aspect-ratio-bg-cover {
 		padding-top: 25%;
 
-		@include sm() {
+		@include sm {
 			padding-bottom: 14%;
 		}
 	}
@@ -54,7 +54,7 @@ h3.h2 {
 	}
 
 	p.lead {
-		@include md() {
+		@include md {
 			font-size: 32px
 		}
 	}
@@ -66,7 +66,7 @@ h3.h2 {
 }
 
 #image-tiles {
-	@include sm() {
+	@include sm {
 		position: relative;
 	}
 
@@ -86,14 +86,14 @@ h3.h2 {
 	.texture-background {
 		padding: 2% 0 10%;
 
-		@include lg() {
+		@include lg {
 			padding-bottom: 25%;
 		}
 	}
 }
 
 .xl-background {
-	@include sm() {
+	@include sm {
 		position: static;
 	}
 
@@ -105,7 +105,7 @@ h3.h2 {
 		color: $tertiary-brand-color;
 		margin: 10% 0 8%;
 
-		@include md() {
+		@include md {
 			margin-top: 104px;
 		}
 	}
@@ -116,7 +116,7 @@ h3.h2 {
 }
 
 .texture-background {
-	@include md() {
+	@include md {
 		.h1 {
 			font-size: 60px;
 		}

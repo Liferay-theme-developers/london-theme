@@ -8,7 +8,7 @@
 		padding-top: 0;
 	}
 
-	@include sm() {
+	@include sm {
 		.signed-in & {
 			margin-top: 32px;
 		}
@@ -82,7 +82,7 @@ a.logo {
 }
 
 #navigationCollapse {
-	@include sm() {
+	@include sm {
 		position: absolute;
 		right: 0;
 		z-index: auto;
@@ -107,7 +107,7 @@ a.logo {
     }
 }
 
-@include sm() {
+@include sm {
 	#banner .navbar {
 		margin: 0;
 		min-height: 0;
