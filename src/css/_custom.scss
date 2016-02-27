@@ -83,6 +83,12 @@ h3.h2 {
 	.texture-background {
 		padding: 2% 0 10%;
 
+		.h1 {
+			@include md {
+				font-size: 60px;
+			}
+		}
+
 		@include lg {
 			padding-bottom: 25%;
 		}
@@ -113,14 +119,6 @@ h3.h2 {
 
 	@include media-query(null, $breakpoint_tablet - 1) {
 		position: relative;
-	}
-}
-
-.texture-background {
-	.h1 {
-		@include md {
-			font-size: 60px;
-		}
 	}
 }
 
