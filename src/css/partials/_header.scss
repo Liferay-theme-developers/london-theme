@@ -30,8 +30,8 @@ a.logo {
 	}
 }
 
-@include media-query(null, $breakpoint_tablet - 1) {
-	.collapsing + div a.logo img, .collapse.in + div a.logo img {
+.collapsing + div a.logo img, .collapse.in + div a.logo img {
+	@include media-query(null, $breakpoint_tablet - 1) {
 		height: 48px;
 		width: 48px;
 	}

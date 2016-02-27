@@ -58,8 +58,9 @@ h3.h2 {
 			font-size: 32px
 		}
 	}
-	@include media-query(null, $screen-xs-max) {
-		h2.h1 {
+
+	h2.h1 {
+		@include media-query(null, $screen-xs-max) {
 			font-size: 38px;
 		}
 	}
@@ -116,8 +117,8 @@ h3.h2 {
 }
 
 .texture-background {
-	@include md {
-		.h1 {
+	.h1 {
+		@include md {
 			font-size: 60px;
 		}
 	}
