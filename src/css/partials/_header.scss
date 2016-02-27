@@ -81,12 +81,6 @@ a.logo {
 }
 
 #navigationCollapse {
-	@include sm {
-		position: absolute;
-		right: 0;
-		z-index: auto;
-	}
-
 	.user-avatar-image {
 		display: inline-block;
 		vertical-align: middle;
@@ -104,6 +98,12 @@ a.logo {
 	.user-personal-bar a {
 		padding: 11px 15px;
     }
+
+	@include sm {
+		position: absolute;
+		right: 0;
+		z-index: auto;
+	}
 }
 
 @include sm {

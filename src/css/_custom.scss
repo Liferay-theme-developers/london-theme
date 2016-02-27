@@ -67,10 +67,6 @@ h3.h2 {
 }
 
 #image-tiles {
-	@include sm {
-		position: relative;
-	}
-
 	.background-placeholder {
 		background-position: center;
 		background-size: cover;
@@ -91,17 +87,13 @@ h3.h2 {
 			padding-bottom: 25%;
 		}
 	}
+
+	@include sm {
+		position: relative;
+	}
 }
 
 .xl-background {
-	@include sm {
-		position: static;
-	}
-
-	@include media-query(null, $breakpoint_tablet - 1) {
-		position: relative;
-	}
-
 	.h1 {
 		color: $tertiary-brand-color;
 		margin: 10% 0 8%;
@@ -113,6 +105,14 @@ h3.h2 {
 
 	.small {
 		color: $primary-brand-color;
+	}
+
+	@include sm {
+		position: static;
+	}
+
+	@include media-query(null, $breakpoint_tablet - 1) {
+		position: relative;
 	}
 }
 
