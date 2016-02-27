@@ -24,7 +24,7 @@ a.logo {
 
 	img {
 		@include transition-duration(0.3s);
-		@include transition-property(width, height, -o-transform);
+		@include transition-property(width, height);
 		@include transition-timing-function(ease-in);
 	}
 }
