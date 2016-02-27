@@ -23,7 +23,6 @@ a.logo {
 	position: absolute;
 
 	img {
-		@include transition-delay(0s);
 		@include transition-duration(0.3s);
 		@include transition-property(width, height, -o-transform);
 		@include transition-timing-function(ease-in);
