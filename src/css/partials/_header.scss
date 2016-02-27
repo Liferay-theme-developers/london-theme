@@ -71,7 +71,7 @@ a.logo {
 .navbar-inverse {
 	margin-bottom: 0;
 
-	& .navbar-toggle {
+	.navbar-toggle {
 		border: 1px solid $secondary-brand-color;
 
 		&:hover, &:focus {
