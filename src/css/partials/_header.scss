@@ -41,6 +41,7 @@ a.logo {
 
 .navbar.navbar-inverse {
 	border-width: 0;
+	margin-bottom: 0;
 
 	.navbar-header {
 		position: absolute;
@@ -61,14 +62,6 @@ a.logo {
 			}
 		}
 	}
-}
-
-.portlet:hover .portlet-topper {
-	z-index: 500;
-}
-
-.navbar-inverse {
-	margin-bottom: 0;
 
 	.navbar-toggle {
 		border: 1px solid $secondary-brand-color;
@@ -77,6 +70,10 @@ a.logo {
 			background-color: $primary-brand-background-color;
 		}
 	}
+}
+
+.portlet:hover .portlet-topper {
+	z-index: 500;
 }
 
 #navigationCollapse {
