@@ -1,3 +1,15 @@
+@mixin btnDefaultState($background-color, $border-color, $color: $secondary-brand-color) {
+	background-color: $background-color;
+	border-color: $border-color;
+	color: $color;
+}
+
+@mixin btnHoverFocus($background-color, $border-color, $color: $secondary-brand-color) {
+	background-color: $background-color;
+	border-color: $border-color;
+	color: $color;
+}
+
 .btn-xl {
 	border-radius: 0;
 	font-size: 19px;
@@ -6,36 +18,25 @@
 }
 
 .btn-theme-default {
-	background-color: $tertiary-background-color;
-	border-color: $secondary-brand-color;
-	color: $secondary-brand-color;
+	@include btnDefaultState($tertiary-background-color, $secondary-brand-color);
 
 	&:hover, &:focus {
-		background-color: $primary-brand-background-color;
-		border-color: $primary-brand-color;
-		color: $secondary-brand-color;
+		@include btnHoverFocus($primary-brand-background-color, $primary-brand-color);
 	}
 }
 
 .btn-theme-primary {
-	background-color: $primary-brand-background-color;
-	border-color: $primary-brand-color;
+	@include btnDefaultState($primary-brand-background-color, $primary-brand-color);
 
 	&:hover, &:focus {
-		background-color: $tertiary-background-color;
-		border-color: $secondary-brand-color;
-		color: $secondary-brand-color;
+		@include btnHoverFocus($tertiary-background-color, $secondary-brand-color);
 	}
 }
 
 .btn-theme-complementary {
-	background-color: $tertiary-background-color;
-	border-color: $tertiary-background-color;
-	color: $secondary-brand-color;
+	@include btnDefaultState($tertiary-background-color, $tertiary-background-color);
 
 	&:hover, &:focus {
-		background-color: $tertiary-background-color;
-		border-color: $secondary-brand-color;
-		color: $secondary-brand-color;
+		@include btnHoverFocus($tertiary-background-color, $secondary-brand-color);
 	}
 }
