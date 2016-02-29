@@ -31,7 +31,7 @@ a.logo {
 
 .collapsing + div a.logo img, .collapse.in + div a.logo img {
 	@include media-query(null, $breakpoint_tablet - 1) {
-		@include size(48px, 48px);
+		@include size(48px);
 	}
 }
 
