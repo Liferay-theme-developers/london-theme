@@ -36,7 +36,7 @@
 
 <div class="container-fluid">
 	<div class="row" id="image-tiles">
-		<div class="col-lg-8 col-md-8 col-no-padding xl-background">
+		<div class="col-md-8 col-no-padding xl-background">
 			<span class="background-placeholder col-md-8" style="background-image: url(${images_folder}/content/background_2_2.jpg)"></span>
 			<div class="container-fluid">
 				<div class="col-lg-4 col-md-6 col-xs-6 h1">
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 col-no-padding">
+		<div class="col-md-4 col-no-padding">
 			<div class="texture-background" style="background-image: url(${images_folder}/content/background_1_2_1.png)">
 				<div class="container-fluid">
 					<div class="col-lg-8">
